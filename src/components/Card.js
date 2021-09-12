@@ -17,10 +17,12 @@ function Card () {
  }, [])
 
     return(
-        <div className='card-container'>
+        <div className='cards-container'>
             {data.map((e) => {
                 return (
-                <img  src={e.baseimageurl} />)
+                  <div className='card'>
+                <img  src={e.baseimageurl} />
+                </div>)
             })}
         </div>
     )
