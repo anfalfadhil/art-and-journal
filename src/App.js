@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="app">
       {/* <Header />
-    <Card /> */}
+     <Card />  */}
     {/* <Route path='/stocks/:symbol' exact render={(routerProps) => <Journal stock={routerProps.location.state.Journal}/>}
-      /> */}
+      />  */}
     <Route path='/img-journal' component={Journal} />
     </div>
   );

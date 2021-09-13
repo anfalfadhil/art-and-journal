@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+
+
 .header-container {
   /* background-image: url('./painting.jpeg'); */
   border: 1px solid rgb(179, 233, 252);
@@ -79,4 +81,37 @@
   width: 50vw;
   height: 100vh;
   padding: 5px 10px 5px 10px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  background: rgb(255, 255, 255);
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+.write {
+  background: linear-gradient(#a4f7ee, #f8f0a3, #faabf1);
+  border-radius: 5px;
+  animation: rotate 3s linear infinite;
+}
+
+
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.question {
+  color: black;
+  text-align: left;
+  padding: 25px;
+  font-size: 30px;
 }
