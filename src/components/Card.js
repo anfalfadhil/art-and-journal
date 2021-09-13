@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Journal from './Journal';
+import { Route, Link } from 'react-router';
 
-function Card () {
+function Card (props) {
     const [data, setData] = useState([])
      useEffect (() => { 
     axios.get('https://api.harvardartmuseums.org/image?apikey=d6fda28c-3901-4112-bcba-623791e4cc0a')
@@ -19,10 +21,21 @@ function Card () {
     return(
         <div className='cards-container'>
             {data.map((e) => {
+              {console.log(props.id)}
+               <Link to={`/img-journal/${props.id}`} key={props.id}>
                 return (
                   <div className='card'>
-                <img  src={e.baseimageurl} />
-                </div>)
+                    <button onClick={console.log(props.id)} > CLICK ME</button>
+                    
+                    <img  src={e.baseimageurl} />
+                    <Route 
+                    path="/img-journal/:id" 
+                    render = { () => <Journal  id={props.id} />}
+                    />
+                  </div>
+                )
+                
+                  </Link>
             })}
         </div>
     )
