@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Journal from './Journal';
 import { Route, Link } from 'react-router-dom';
 
 function Card () {
@@ -8,11 +7,9 @@ function Card () {
     const [imageId, setImageId ] = useState()
 
      useEffect (() => { 
-    axios.get('https://api.harvardartmuseums.org/image?apikey=d6fda28c-3901-4112-bcba-623791e4cc0a')
+    axios.get('https://api.harvardartmuseums.org/image?apikey=d6fda28c-3901-4112-bcba-623791e4cc0a&size=20')
    .then( (response)=> {
-     console.log(response.data.records[0].baseimageurl);
       setData(response.data.records)
-      console.log(response.data.records)
     })
     .catch(function (error) {
       console.log(error);
@@ -24,20 +21,15 @@ function Card () {
     return(
         <div className='cards-container'>
             {data.map((e) => {
-              {console.log(e.imageid)}
+              // console.log(e)
+              console.log(data)
+              return(
                <Link to={`/img-journal/${e.imageid}`} key={e.imageid}>
-                return (
                   <div className='card'>  
                     <img  src={e.baseimageurl} />
-                    <Route 
-                    path="/img-journal/:imageid" 
-                    render = { () => <Journal  id={e.imageid} />}
-                    />
                   </div>
-                )
-                
                 </Link>
-            })}
+           ) })}
         </div>
     )
 }

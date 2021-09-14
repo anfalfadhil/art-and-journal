@@ -11,8 +11,7 @@ function Header () {
             {/* source: https://vanillapapers.net/2020/08/09/journaling-benefits/ */}
             <p>with great benefits of art, seeing through the soul of another human being and trying to connect to their mental being and describing WHAT YOU FEEL seeing their art will help you slow down your brain waves and getting into a relaxed state. So, let's try :)</p>
             </div>
-            <NavBar />
-            {/* <Route path='/' component={NavBar} /> */}
+          
         </div>
     )
 }
