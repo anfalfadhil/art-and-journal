@@ -29,7 +29,7 @@ function Journal () {
     return (
         <div className='journal-container'>
             <NavBar />
-            <h2 className='question '>So, How do you feel looking at this painting?</h2>
+            <h2 className='question '>So, How do you feel looking at this image?</h2>
             <div className='creation'>
             <textarea className='textarea' type='textarea'></textarea>
             <img className='chosen-image' src={img.baseimageurl} />

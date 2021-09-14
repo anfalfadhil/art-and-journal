@@ -21,8 +21,6 @@ function Card () {
     return(
         <div className='cards-container'>
             {data.map((e) => {
-              // console.log(e)
-              console.log(data)
               return(
                <Link to={`/img-journal/${e.imageid}`} key={e.imageid}>
                   <div className='card'>  
